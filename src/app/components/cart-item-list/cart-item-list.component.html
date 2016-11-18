@@ -68,58 +68,56 @@
         </div>
         <button id="pin" [ngClass]="{'pull-right':true, 'btn':true,'btn-sm':true,'btn-default':!model.forceDel,'btn-danger':model.forceDel}" (click)="model.forceDel=!model.forceDel"><span class="glyphicon glyphicon-exclamation-sign"></span> elimina senza conferma</button>
 
-    </div> <!-- toolbar -->
-     <div [hidden]="!submitted" id="products" class="row list-group" >
-       <div [ngClass]="{'item':true,'list-group-item':listView,'grid-group-item':!listView}" class="col-xl-2 col-md-3 col-sm-4 col-xs-6 col-xxs-12" *ngFor="let myItem of list">
-            <div class="thumbnail">
-                <div class="ribbon blue" *ngIf="myItem.special"><span>special</span></div>
+    </div> <!-- end toolbar -->
+     
+
+<div class="wrapper wrapper-content animated fadeInRight">
+<div [hidden]="!submitted" id="products2" class="row">
+    <div class="col-md-3 reduce-pad-dx-sx" *ngFor="let myItem of list">
+        <div class="ibox">
+            <div class="ibox-content product-box">
                 <div class="ribbon red" *ngIf="myItem.discount"><span>-{{myItem.discount}}%</span></div>
-                <div class="img-container">
-                  <img class="group list-group-image image-responsive" src="{{getMainImgUrl(myItem.sku)}}" alt="" />
+                <div class="product-imitation">
+                    <div class="img-container" id="img-carsl">
+                      <img class="image-responsive image-on" src="{{getMainImgUrl(myItem.sku)}}" alt="" />
+                      <img class="image-responsive image-off" src="{{getOtherImgUrl(myItem.sku,1)}}" alt="" />
+                    </div>
                 </div>
-                <div class="caption">
-                    <h4 class="group inner list-group-item-heading">{{myItem.name}}</h4>
-                    <p class="group inner list-group-item-text">{{getDescription(myItem.sku) | slice:0:100}}...</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 price">
-                            <p class=""><b>{{myItem.price | currency:'EUR':true:'1.2-2'}}</b></p>
-                        </div>
-                        <div class="col-xs-12 col-sm-6">                     
-                            <div class="input-group">
-                              <span class="input-group-btn">
-                                <button class="btn btn-default btn-success" (click)="onQtyBtn(myItem.sku,-1)"><b>-</b></button>
-                              </span>
-                              <input type="number" class="form-control text-center" [(ngModel)]="myItem.qty" (ngModelChange)="onQtyChange(myItem.sku,$event)">
-                              <span class="input-group-btn">
-                                <button class="btn btn-default btn-success" (click)="onQtyBtn(myItem.sku,1)"><b>+</b></button>
-                              </span>
-                            </div>
-                        
-                        </div>
-                        <div class="col-xs-12 other-prices">
-                            <span class="other-price" *ngIf="myItem.shipCost"><span class="glyphicon glyphicon-send"></span> {{myItem.shipCost | currency:'EUR':true:'1.2-2'}}</span>
-                            <span class="other-price" *ngIf="!myItem.shipCost"><span class="glyphicon glyphicon-send"></span> {{0 | currency:'EUR':true:'1.2-2'}}</span>
-                            <span class="other-price" *ngIf="myItem.BOPIS"><span class="glyphicon glyphicon-home"></span> {{0 | currency:'EUR':true:'1.2-2'}}</span>
-                        </div>
-                        <div class="col-xs-6">                            
-                          <div class="btn-group">
+                <div class="product-desc">
+                    <span class="product-old-price">
+                        {{myItem.oldPrice | currency:'EUR':true:'1.2-2'}}
+                    </span>
+                    <span class="product-price">
+                        {{myItem.price | currency:'EUR':true:'1.2-2'}}
+                    </span>
+                    <small class="text-muted">{{myItem.category}}</small>
+                    <span class="product-name"> {{myItem.name}}</span>
+
+                    <div class="small m-t-xs">
+                        {{getDescription(myItem.sku) | slice:0:120 }}
+                    </div>
+                    <div class="small">
+                      <span class="other-price" *ngIf="myItem.shipCost"><span class="glyphicon glyphicon-send"></span> {{myItem.shipCost | currency:'EUR':true:'1.2-2'}}</span>
+                      <span class="other-price" *ngIf="!myItem.shipCost"><span class="glyphicon glyphicon-send"></span> {{0 | currency:'EUR':true:'1.2-2'}}</span>
+                      <span class="other-price" *ngIf="myItem.BOPIS"><span class="glyphicon glyphicon-home"></span> {{0 | currency:'EUR':true:'1.2-2'}}</span>
+                    </div>
+                    <div class="m-t text-righ">
+                         <div class="btn-group">
                             <button id="similar" [ngClass]="{'btn':true,'btn-sm':true,'btn-default':model.similar[myItem.sku]!==similarity.Love,'btn-success':model.similar[myItem.sku]===similarity.Love}" (click)="onSimilar(myItem.sku,true)"><span class="glyphicon glyphicon-heart"></span></button> 
                             <button id="similar" [ngClass]="{'btn':true,'btn-sm':true,'btn-default':model.similar[myItem.sku]!==similarity.Hate,'btn-danger':model.similar[myItem.sku]===similarity.Hate}" (click)="onSimilar(myItem.sku,false)"><span class="glyphicon glyphicon-ban-circle"></span></button>
-                          </div>
-                        </div>
-                        <div class="col-xs-6">                            
-                          <div class="btn-group">
+                          </div>                          
+                          <div class="btn-group pull-right">
                             <button id="delete" class="btn btn-default btn-sm" (click)="onDelete(myItem.sku)"><span class="glyphicon glyphicon-trash"></span></button> 
                             <button id="pin" [ngClass]="{'btn':true,'btn-sm':true,'btn-default':!model.pin[myItem.sku],'btn-danger':model.pin[myItem.sku]}" (click)="onPin(myItem.sku)"><span class="glyphicon glyphicon-pushpin"></span></button> 
                          </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
+</div>
+</div>
 
-   
 </div>
 
 

@@ -20,7 +20,9 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles/styles.css",
-        "styles/forms.css"
+        "styles/forms.css",
+        "styles/grid.css",
+        "styles/ribbon.css"
       ],
       "scripts": [
         "../node_modules/hammerjs/hammer.min.js"

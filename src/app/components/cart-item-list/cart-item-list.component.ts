@@ -206,9 +206,9 @@ export class CartItemListComponent implements OnInit {
 
     getDescription(itemId: string): string{
         let item:MsCartItem = this.getItem(itemId);
-        let ret:string = "# ";
+        let ret:string = "* ";
         if (item.descriptions)
-            ret += item.descriptions.join(" # ");
+            ret += item.descriptions.join(" * ");
         return ret; 
     }
     getLongDescription(itemId: string): string{
@@ -223,6 +223,17 @@ export class CartItemListComponent implements OnInit {
         let ret:string = "";
         if (item.imgUrls)
             ret = item.imgUrls[0];
+        return ret; 
+    }
+
+    getOtherImgUrl(itemId: string, index:number): string{
+        let item:MsCartItem = this.getItem(itemId);
+        let ret:string = "";
+        if (item.imgUrls) 
+            if(item.imgUrls.length > index)
+                ret = item.imgUrls[index];
+            else
+                ret = item.imgUrls[0];
         return ret; 
     }
 

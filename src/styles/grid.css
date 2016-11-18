@@ -1,0 +1,229 @@
+/** ibox **/
+.ibox-content h1,
+.ibox-content h2,
+.ibox-content h3,
+.ibox-content h4,
+.ibox-content h5,
+.ibox-title h1,
+.ibox-title h2,
+.ibox-title h3,
+.ibox-title h4,
+.ibox-title h5 {
+  margin-top: 5px;
+}
+
+.ibox-content.text-box {
+  padding-bottom: 0;
+  padding-top: 15px;
+}
+
+.ibox {
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0;
+}
+.ibox.collapsed .ibox-content {
+  display: none;
+}
+.ibox.collapsed .fa.fa-chevron-up:before {
+  content: "\f078";
+}
+.ibox.collapsed .fa.fa-chevron-down:before {
+  content: "\f077";
+}
+.ibox:after,
+.ibox:before {
+  display: table;
+}
+.ibox-title {
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background-color: #ffffff;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 2px 0 0;
+  color: inherit;
+  margin-bottom: 0;
+  padding: 15px 15px 7px;
+  min-height: 48px;
+}
+.ibox-content {
+  background-color: #ffffff;
+  color: inherit;
+  padding: 15px 20px 20px 20px;
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 1px 0;
+}
+
+.ibox-footer {
+  color: inherit;
+  border-top: 1px solid #e7eaec;
+  font-size: 90%;
+  background: #ffffff;
+  padding: 10px 15px;
+}
+.ibox-content {
+  clear: both;
+}
+.ibox-heading {
+  background-color: #f3f6fb;
+  border-bottom: none;
+}
+.ibox-heading h3 {
+  font-weight: 200;
+  font-size: 24px;
+}
+.ibox-title h5 {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 0 7px;
+  padding: 0;
+  text-overflow: ellipsis;
+  float: left;
+}
+.ibox-title .label {
+  float: left;
+  margin-left: 4px;
+}
+.ibox-tools {
+  display: block;
+  float: none;
+  margin-top: 0;
+  position: relative;
+  padding: 0;
+  text-align: right;
+}
+.ibox-tools a {
+  cursor: pointer;
+  margin-left: 5px;
+  color: #c4c4c4;
+}
+.ibox-tools a.btn-primary {
+  color: #fff;
+}
+.ibox-tools .dropdown-menu > li > a {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+.ibox .ibox-tools.open > .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.product-box {
+  padding: 0;
+  border: 1px solid #e7eaec;
+  background-color: #f8f8f9;
+}
+.product-box:hover,
+.product-box.active {
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 3px 7px 0 #a8a8a8;
+  -moz-box-shadow: 0 3px 7px 0 #a8a8a8;
+  box-shadow: 0 3px 7px 0 #a8a8a8;
+  background-color: #e8e8e9;
+}
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #676a6c;
+  display: block;
+  margin: 2px 0 5px 0;
+  height: 44px
+}
+.product-name:hover,
+.product-name:focus {
+  color: #1ab394;
+}
+.product-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #1ab394;
+  padding: 6px 12px;
+  position: absolute;
+  top: -32px;
+  right: 0;
+}
+.product-old-price {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: line-through;
+  color: #b0b0b0;
+  /*background-color: silver;*/
+  padding: 6px 12px;
+  position: absolute;
+  top: -64px;
+  right: 0;
+}
+.product-detail .ibox-content {
+  padding: 30px 30px 50px 30px;
+}
+.image-imitation {
+  /*background-color: #f8f8f9;*/
+  text-align: center;
+/*  padding: 200px 0;*/
+}
+.product-main-price small {
+  font-size: 10px;
+}
+.product-images {
+  margin: 0 20px;
+}
+.product-desc {
+  padding: 20px;
+  position: relative;
+}
+.product-imitation {
+  text-align: center;
+  padding: 45px 0;
+  background-color: #ffffff;
+  color: #bebec3;
+  font-weight: 600;
+}
+
+.text-muted {
+  color: #888888;
+}
+
+
+.m-t-xs {
+  margin-top: 5px;
+  height: 55px;
+}
+.m-t {
+  margin-top: 15px;
+}
+
+.reduce-pad-dx-sx{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.img-container > img {
+    max-height: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+}
+
+.img-container {
+    max-width: 100%;
+    height: 165px;
+}
+
+#img-carsl .image-off, #img-carsl:hover .image-on{
+   display:none
+}
+#img-carsl .image-on, #img-carsl:hover .image-off{
+   display:block
+}
+/** end ibox **/
