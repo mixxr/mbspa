@@ -233,7 +233,7 @@ export class CartItemListComponent implements OnInit {
 
 onModalClick(itemId:string) {
 
-    let msg = 'Sei sicuro di voler rimuovere '+ ((Object.values(this.model.pin).toString().indexOf('true')>=0)?'i prodotti?':'il prodotto?');
+    let msg = 'Sei sicuro di voler rimuovere '+ (((<any>Object).values(this.model.pin).toString().indexOf('true')>=0)?'i prodotti?':'il prodotto?');
 
     let confirm = this.modal.confirm()
     .size('sm')
@@ -243,7 +243,7 @@ onModalClick(itemId:string) {
     .body(msg)
     .cancelBtn('Annulla')
     .open().catch(err => {console.log("MODAL ERROR: Deleted in any case");this.confirmDelete(itemId,true);})
-            .then(dialog => dialog.result)
+            .then(dialog => (<any>dialog).result)
             .then(result => this.confirmDelete(itemId,true))
             .catch(err => this.confirmDelete(itemId,false));
   }

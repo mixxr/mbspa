@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { MsSearchSvcService } from './ms-search-svc.service';
+import { MsSearchService } from './ms-search.service';
 
 describe('MsSearchSvcService', () => {
   beforeEach(() => {
