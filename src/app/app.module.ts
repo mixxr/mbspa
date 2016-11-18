@@ -14,11 +14,15 @@ import { MdSlideToggleModule} from '@angular2-material/slide-toggle';
 // modal
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+import { CartComponent } from './components/cart/cart.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartItemListComponent
+    CartItemListComponent,
+    CartComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,
