@@ -16,7 +16,7 @@ import { Modal } from 'angular2-modal/plugins/bootstrap';
 })
 export class CartItemListComponent implements OnInit {
 
-    public static _DEF_BUDGET: number = 500;
+    
     public similarity = Similarity;
     public pbarColor:string = "";
 
@@ -26,7 +26,6 @@ export class CartItemListComponent implements OnInit {
     //deletingLs: { [id: string] : boolean; } = {};
 
     currencies = ["EUR", "USD"];
-    submitted = false;
     listView = false;
 
    constructor(public searchSvc:MsSearchService, overlay: Overlay, vcRef: ViewContainerRef, public modal: Modal){
@@ -43,7 +42,7 @@ export class CartItemListComponent implements OnInit {
     // }
 
     ngOnInit() {
-        this.model = new MsBudget(CartItemListComponent._DEF_BUDGET);
+        this.model = new MsBudget(MsBudget._DEF_BUDGET);
         this.resetList();
         this.model.cart = {};
     }
@@ -56,7 +55,7 @@ export class CartItemListComponent implements OnInit {
         console.log('addList>list-d:',this.list.length);
         list.map((item)=>this.model.cart[item.sku]=item.qty);
         if (this.model.value - this.calcCurrentValue() > 1)
-            this.onSubmit(1);
+            this.doSearch(1);
     }
 
 
@@ -73,8 +72,8 @@ export class CartItemListComponent implements OnInit {
 
 
     // search bar event handler
-    onSubmit(maxItems:number) { 
-        console.log('on submit:',this.model.value);
+    doSearch(maxItems:number) { 
+        console.log('on doSearch:',this.model.value);
         if (this.model.value <= 1 || maxItems === 0)
             return;
         this.model.maxItems = maxItems || this.model.maxItems;
@@ -83,12 +82,11 @@ export class CartItemListComponent implements OnInit {
                 .subscribe(
                     list => this.addList(list),
                     error => this.message = <any>error);
-        this.submitted = true; 
     }
-    onEdit() { this.submitted = false; this.isOpen = false;}
+    onEdit() {  this.isOpen = false;}
     
     onReset() {
-        this.model = new MsBudget(CartItemListComponent._DEF_BUDGET);
+        this.model = new MsBudget(MsBudget._DEF_BUDGET);
         this.active = false;
         this.resetList();
         setTimeout(() => this.active = true, 0);
@@ -134,7 +132,7 @@ export class CartItemListComponent implements OnInit {
             });
             this.model.cart[itemId] = 0;
             this.removeItem(itemId);
-            this.onSubmit(1);
+            this.doSearch(1);
         }else
             this.getItem(itemId).qty = this.model.cart[itemId];
     }

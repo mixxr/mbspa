@@ -1,6 +1,8 @@
 import {Similarity} from "./similarity.enum";
 
 export class MsBudget {
+    public static _DEF_BUDGET: number = 500;
+    
     constructor(
     public value: number,
     public currency: string = 'EUR',

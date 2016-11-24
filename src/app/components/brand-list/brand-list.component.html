@@ -1,0 +1,18 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+<div id="brandlist" class="row">
+    <div class="col-md-2" *ngFor="let brand of list">
+        <div class="ibox">
+            <div class="ibox-content product-box">
+                <div class="product-imitation">
+                    <div class="img-container" id="img-carsl">
+                      <img class="image-responsive" src="{{brand.imgUrl}}" alt="{{brand.name}}" />
+                    </div>
+                </div>
+                <div class="ibox-title">
+                  {{brand.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

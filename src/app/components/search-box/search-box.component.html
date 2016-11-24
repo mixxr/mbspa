@@ -1,3 +1,37 @@
-<p>
-  search-box works!
-</p>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1>FIT MY POCKET</h1>
+            <hr style="color:black"/>
+            <h2>FISSA IL TUO BUDGET E CERCA I PRODOTTI MIGLIORI A PREZZI IMBATTIBILI</h2>
+            <br/>
+          </div>
+      </div>
+      <div class="row hidden-xs hidden-sm">
+          <div class="col-xs-12">
+            <br/><br/><br/><br/>
+          </div>
+      </div>
+       <div class="row hidden-xs hidden-sm">
+         <div class="col-md-2 col-xs-1"><!--Column left--></div>
+          <md-input autofocus type="number" placeholder="OGGI VOGLIO SPENDERE" class="col-xs-3 col-md-4" [(ngModel)]="model.value" >
+            <span md-prefix>€&nbsp;</span>
+          </md-input>
+          <md-slide-toggle  class="col-xs-4 col-md-3" color="primary" style="">SOLO OFFERTE</md-slide-toggle>         
+          <button md-button id="btn1" class="col-xs-2 col-md-1" (click)="onSubmit()"><span class="glyphicon glyphicon-search" style="color:#009688"></span> CERCA</button>
+          <div class="col-md-2 col-xs-1"><!--Column right--></div>
+               
+       </div>
+       <div class="row hidden-md hidden-lg">
+          <md-input autofocus type="number" placeholder="OGGI VOGLIO SPENDERE" class="col-xs-12" >
+            <span md-prefix>€&nbsp;</span>
+            <span md-suffix>.00</span>
+          </md-input>
+       </div>
+       <div class="row hidden-md hidden-lg">
+          <md-slide-toggle  class="col-xs-7" color="primary">SOLO OFFERTE</md-slide-toggle>         
+          <button md-button  id="btn2"  class="col-xs-3" (click)="onSubmit()"><span class="glyphicon glyphicon-search" style="color:#009688"></span> CERCA</button>
+       </div>
+    </div> <!-- container -->
+</div><!-- jumbotron -->
