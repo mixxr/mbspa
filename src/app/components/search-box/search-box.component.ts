@@ -9,10 +9,16 @@ import { MsBudget} from '../../model/ms-budget'
 export class SearchBoxComponent implements OnInit {
 
   model:MsBudget;
+  productCounter:number = 52103;
+
   constructor() { }
 
   ngOnInit() {
       this.model = new MsBudget(MsBudget._DEF_BUDGET);
+      let me = this;
+      window.setInterval(function() {
+        me.productCounter += (Date.now() % 100);
+      }, 3000);
   }
 
   onSubmit() {
