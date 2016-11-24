@@ -21,12 +21,14 @@
 
 .product-box {
   padding: 0;
-  border: 1px solid #e7eaec;
+  border: 0px solid #e7eaec;
   background-color: #f8f8f9;
 }
 .product-box:hover,
 .product-box.active {
-
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
 }
 .product-name {
   font-size: 16px;
@@ -66,3 +68,14 @@
 
 
 /** end ibox **/
+
+/** margins **/
+.mxr-centered-margins { 
+  margin: 0em 5em 0 5em; 
+}
+
+@media screen and (min-width: 1000px) {
+  .mxr-centered-margins { 
+    margin: 0em 15em 0 15em; 
+  }
+}
