@@ -18,6 +18,10 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { BrandListComponent } from './components/brand-list/brand-list.component';
 import { CartCheckoutComponent } from './components/cart-checkout/cart-checkout.component';
 import { SearchPageComponent } from './routes/pages/search-page/search-page.component';
+import { ChartBarComponent } from './components/chart-bar/chart-bar.component';
+
+// chart (ng2-chart)
+import { ChartsModule} from 'ng2-charts/ng2-charts';
 
 @NgModule({
   declarations: [
@@ -26,14 +30,16 @@ import { SearchPageComponent } from './routes/pages/search-page/search-page.comp
     SearchBoxComponent,
     BrandListComponent,
     CartCheckoutComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    ChartBarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MdInputModule.forRoot(), MdSlideToggleModule.forRoot(),
-    ModalModule.forRoot(), BootstrapModalModule
+    ModalModule.forRoot(), BootstrapModalModule,
+    ChartsModule
   ],
   providers: [MsSearchService],
   bootstrap: [AppComponent]

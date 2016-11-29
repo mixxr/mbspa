@@ -38,22 +38,45 @@ line-height: 1.2;
     margin: 1em 0;
     padding: 0; 
 }
+
+.jumbotron .mxr-counter-wrapper{
+    color:#444;
+}
+.jumbotron .mxr-counter{
+    color:silver;
+}
 /** router **/
 
-.rw-words-1 span{
+.rw-words-1 b{
 	opacity: 0;
 	overflow: hidden;
-	-webkit-animation: rotateWord 8s linear infinite 0s;
-	-ms-animation: rotateWord 8s linear infinite 0s;
-	animation: rotateWord 8s linear infinite 0s;
+	-webkit-animation: rotateWord 12s linear infinite 0s;
+	-ms-animation: rotateWord 12s linear infinite 0s;
+	animation: rotateWord 12s linear infinite 0s;
+    font-family: 'Ubuntu' !important;
+    color: #009698;
+    margin-top:3px;
 }
-/*
-.rw-words-1 h3:nth-child(2) { 
-    -webkit-animation-delay: 2s; 
-	-ms-animation-delay: 2s; 
-	animation-delay: 2s; 
+.rw-words-1 b:nth-child(2) { 
+    -webkit-animation-delay: 3s; 
+	-ms-animation-delay: 3s; 
+	animation-delay: 3s; 
+	color: #009688;
 }
-*/
+.rw-words-1 b:nth-child(3) { 
+    -webkit-animation-delay: 6s; 
+	-ms-animation-delay: 6s; 
+	animation-delay: 6s; 
+	color:#008678;	
+    margin-top:5px;
+}
+.rw-words-1 b:nth-child(4) { 
+    -webkit-animation-delay: 9s; 
+	-ms-animation-delay: 9s; 
+	animation-delay: 9s; 
+	color: #007678;
+    margin-top:10px;
+}
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -webkit-transform: translateY(-30px); }
@@ -81,9 +104,15 @@ line-height: 1.2;
 	80% { opacity: 0; }
     100% { opacity: 0; }
 }
+.rw-sentence { 
+    font-size: 14px; 
+    font-style: italic;
+    text-transform: capitalize;
+}
+
 @media screen and (max-width: 768px){
-	.rw-sentence { font-size: 18px; }
+	.rw-sentence { font-size: 12px; }
 }
 @media screen and (max-width: 320px){
-	.rw-sentence { font-size: 9px; }
+	.rw-sentence { font-size: 9px;  }
 }

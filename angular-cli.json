@@ -25,7 +25,8 @@
         "styles/ribbon.css"
       ],
       "scripts": [
-        "../node_modules/hammerjs/hammer.min.js"
+        "../node_modules/hammerjs/hammer.min.js",
+        "../node_modules/chart.js/dist/Chart.bundle.min.js"
       ],
       "environments": {
         "source": "environments/environment.ts",
