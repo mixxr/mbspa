@@ -1,3 +1,11 @@
 .chart {
       display: block;
     }
+
+.mxr-tale:hover{
+  border: 1px solid #00f0f0;
+}
+
+.mxr-tale-in{
+  padding:0 5px 0 5px;
+}

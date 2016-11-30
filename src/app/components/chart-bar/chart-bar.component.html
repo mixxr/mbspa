@@ -1,7 +1,22 @@
 <div class="wrapper wrapper-content animated fadeInRight">
   <div id="chartbar" class="row">
-    <div class="col-xs-6 col-sm-4 col-md-3">
-      <canvas class="chart" [datasets]="datasets" [labels]="labels" [options]="options" [chartType]="'line'" [colors]='colors' baseChart> </canvas>
+    <div class="col-xs-6 col-sm-4 col-md-4 mxr-tale">
+      <a href='#' class='mxr-tale-in' >
+      <div class='row'>
+        <div class='col-xs-4'>
+          <img src='assets/images/img1.jpg' class='img-responsive img-rounded'/>
+        </div>
+        <div class='col-xs-8'>
+          <canvas class="chart" [datasets]="nDS[0]" [labels]="labels" [options]="options" [chartType]="'line'" [colors]='nColors[0]' (chartHover)="onChartHovered($event)" baseChart> </canvas>
+        </div>
+      </div>
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <canvas class="chart" [datasets]="nDS[1]" [labels]="labels" [options]="options" [chartType]="'line'" [colors]='nColors[1]' baseChart> </canvas>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4">
+      <canvas class="chart" [datasets]="nDS[2]" [labels]="labels" [options]="options" [chartType]="'bar'" [colors]='nColors[2]' baseChart> </canvas>
     </div>
   </div>
 </div>
