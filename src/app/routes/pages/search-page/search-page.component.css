@@ -1,10 +1,22 @@
-/** margins **/
-.mxr-centered-margins { 
-  margin: 0em 5em 0 5em; 
+.mxr-fullscreen {
+width: 100%; height: 100%; top: 0; left: 0;
+background: url(assets/images/fashion_index.jpg) no-repeat center top; position: fixed; z-index: -1;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
-@media screen and (min-width: 1000px) {
-  .mxr-centered-margins { 
-    margin: 0em 15em 0 15em; 
-  }
+.mxr-force-to-bottom{
+      position:absolute;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -50%;
+  width: 100%;
+}
+
+h1{
+  background: url("/assets/images/viciousshop_logo.png") no-repeat; background-size: contain;
+  color: transparent;
+  font-size:48pt;
 }

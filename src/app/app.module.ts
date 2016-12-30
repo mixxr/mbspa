@@ -22,6 +22,8 @@ import { ChartBarComponent } from './components/chart-bar/chart-bar.component';
 
 // chart (ng2-chart)
 import { ChartsModule} from 'ng2-charts/ng2-charts';
+import { BrandCarouselComponent } from './components/brand-carousel/brand-carousel.component';
+import { SocialLineComponent } from './components/social-line/social-line.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ChartsModule} from 'ng2-charts/ng2-charts';
     BrandListComponent,
     CartCheckoutComponent,
     SearchPageComponent,
-    ChartBarComponent
+    ChartBarComponent,
+    BrandCarouselComponent,
+    SocialLineComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+
+.mxr-carousel{
+    background-color: #efefef;
+    margin-bottom: 0px;
+}
+
+.mxr-carousel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mxr-carousel li:first-child {
+    background: none;
+}
+.mxr-carousel li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    vertical-align: top;
+    background: url(/assets/images/sep.png) repeat-y left top;
+    padding: 25px 10px 34px;
+}
+.mxr-carousel li .padding, .mxr-carousel li {
+    position: relative;
+}
+
+.mxr-clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
