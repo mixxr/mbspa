@@ -7,9 +7,27 @@ background: url(assets/images/fashion_index.jpg) no-repeat center top; position:
 background-size: cover;
 }
 
+/** margins **/
+.mxr-centered-margins { 
+  margin: 0em 5em 0 5em; 
+}
+
+@media screen and (min-width: 1000px) {
+  .mxr-centered-margins { 
+    margin: 0em 15em 0 15em; 
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .mxr-required-min-height { 
+    display: none; 
+  }
+}
+
+
 .mxr-force-to-bottom{
       position:absolute;
-  bottom: 5%;
+  bottom: 55px;
   left: 50%;
   margin-left: -50%;
   width: 100%;
@@ -18,5 +36,25 @@ background-size: cover;
 h1{
   background: url("/assets/images/viciousshop_logo.png") no-repeat; background-size: contain;
   color: transparent;
-  font-size:48pt;
+  font-size:400%;
+}
+
+@media screen and (max-width: 1000px) {
+  h1{
+  background: url("/assets/images/viciousshop_logo.png") no-repeat; background-size: contain;
+  color: transparent;
+  font-size:200%;
+  }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #131313;
+    width: 350px;
+    height: 48px;
+    z-index: 500;
+    margin-top: 20px;
+    display: inline-block;
 }

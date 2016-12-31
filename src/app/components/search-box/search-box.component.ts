@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MsBudget} from '../../model/ms-budget'
 
 @Component({
   selector: 'app-search-box',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.css']
 })

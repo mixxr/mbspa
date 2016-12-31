@@ -13,9 +13,9 @@ export class BrandCarouselComponent implements OnInit {
     this.list = [
       new Brand("Gucci","gucci","/assets/images/brands/gucci.jpg"),
       new Brand("Cartier","cartier","/assets/images/brands/cartier.jpg"),
-      new Brand("Gucci","gucci","/assets/images/brands/gucci.jpg"),
-      new Brand("Cartier","cartier","/assets/images/brands/cartier.jpg"),
-      new Brand("Gucci","gucci","/assets/images/brands/gucci.jpg")
+      new Brand("hermes_paris","hermes_paris","/assets/images/brands/hermes_paris.jpg"),
+      new Brand("louis_vuitton","louis_vuitton","/assets/images/brands/louis_vuitton.jpg"),
+      new Brand("prada","prada","/assets/images/brands/prada.jpg")
     ];
   }
 

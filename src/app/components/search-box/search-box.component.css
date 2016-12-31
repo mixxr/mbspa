@@ -1,118 +1,69 @@
-.jumbotron{
-  padding-top: 10%;
-  padding-bottom: 10%;
-  border-bottom: 2px solid #009688;
-  background-color:#202020;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  -webkit-transition: height 2s linear; /* For Safari 3.1 to 6.0 */
-  transition: height 2s linear;
+
+.centering{
+text-align: center
 }
 
-.jumbotron.to-close {
-  height: 20px!important;
-  padding-top: 0;
-  padding-bottom: 0;
+h2{
+    color: #eaeaea;
+    font: 350% gabriola,sans-serif;
+    font-variant: small-caps;
 }
 
-.jumbotron h1 {
-  font-family: Futura-light-normal, Helvetica,Arial,san-serif;
-  font-size: 2.3em;
-  text-transform: capitalize;
-  line-height: 1.2;
-  color: #009688;
+@media screen and (max-width: 1000px) {
+  h2{
+    color: #eaeaea;
+    font: 150% gabriola,sans-serif;
+    font-variant: small-caps;
+}
+}
+label{
+    font-size:24px;
+    color:#808000;
 }
 
-.jumbotron h2 {
-  font-family: Futura-light-normal, Helvetica,Arial,san-serif;
-  font-size: 1.5em;
-  text-transform: capitalize;
-line-height: 1.2;
+
+input[type="number"]
+{
+    font-size:22px;
+    color:#eaeaea; background-color: transparent; border:0px;border-bottom: 2px solid #eaeaea;
 }
 
-.jumbotron hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #009688;
-    margin: 1em 0;
-    padding: 0; 
+input[type="number"]:focus ,
+input[type="number"]:active
+{
+    outline: none;
+    font-size:24px;
+    color:#808000; background-color: transparent;  border:0px;border-bottom: 2px solid #808000;
 }
 
-.jumbotron .mxr-counter-wrapper{
-    color:#444;
-}
-.jumbotron .mxr-counter{
-    color:silver;
-}
-/** router **/
-
-.rw-words-1 b{
-	opacity: 0;
-	overflow: hidden;
-	-webkit-animation: rotateWord 12s linear infinite 0s;
-	-ms-animation: rotateWord 12s linear infinite 0s;
-	animation: rotateWord 12s linear infinite 0s;
-    font-family: 'Ubuntu' !important;
-    color: #009698;
-    margin-top:3px;
-}
-.rw-words-1 b:nth-child(2) { 
-    -webkit-animation-delay: 3s; 
-	-ms-animation-delay: 3s; 
-	animation-delay: 3s; 
-	color: #009688;
-}
-.rw-words-1 b:nth-child(3) { 
-    -webkit-animation-delay: 6s; 
-	-ms-animation-delay: 6s; 
-	animation-delay: 6s; 
-	color:#008678;	
-    margin-top:5px;
-}
-.rw-words-1 b:nth-child(4) { 
-    -webkit-animation-delay: 9s; 
-	-ms-animation-delay: 9s; 
-	animation-delay: 9s; 
-	color: #007678;
-    margin-top:10px;
-}
-@-webkit-keyframes rotateWord {
-    0% { opacity: 0; }
-    2% { opacity: 0; -webkit-transform: translateY(-30px); }
-	5% { opacity: 1; -webkit-transform: translateY(0px);}
-    17% { opacity: 1; -webkit-transform: translateY(0px); }
-	20% { opacity: 0; -webkit-transform: translateY(30px); }
-	80% { opacity: 0; }
-    100% { opacity: 0; }
-}
-@-ms-keyframes rotateWord {
-    0% { opacity: 0; }
-    2% { opacity: 0; -ms-transform: translateY(-30px); }
-	5% { opacity: 1; -ms-transform: translateY(0px);}
-    17% { opacity: 1; -ms-transform: translateY(0px); }
-	20% { opacity: 0; -ms-transform: translateY(30px); }
-	80% { opacity: 0; }
-    100% { opacity: 0; }
-}
-@keyframes rotateWord {
-    0% { opacity: 0; }
-    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
-	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
-    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
-	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
-	80% { opacity: 0; }
-    100% { opacity: 0; }
-}
-.rw-sentence { 
-    font-size: 14px; 
-    font-style: italic;
-    text-transform: capitalize;
+button{
+    background-color: transparent;
+    color: #eaeaea;
+    border: 0px;
+    font-variant: small-caps;
 }
 
-@media screen and (max-width: 768px){
-	.rw-sentence { font-size: 12px; }
+button:focus,
+button:active{
+    outline: none;
 }
-@media screen and (max-width: 320px){
-	.rw-sentence { font-size: 9px;  }
+
+button:hover{
+    font-weight: bold;
+    color: #808000;
+    background-color: lightgoldenrodyellow;
+}
+
+.row md-slide-toggle{
+    color:#eaeaea; 
+    font-size: 20pt;
+}
+
+md-slide-toggle .md-slide-toggle-container .md-slide-toggle-thumb,
+md-slide-toggle .md-slide-toggle-bar {
+    background-color:#808000; 
+}
+
+md-slide-toggle .md-slide-toggle-thumb-container> .md-primary.md-checked .md-slide-toggle-thumb{
+    background-color: yellow;
 }
