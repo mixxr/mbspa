@@ -25,12 +25,13 @@ h2{
     color:#808000;
 }
 label{
-    font-size:24px;
+    font-size:34px;
+    font-weight: normal;
 }
 
 input[type="number"]
 {
-    font-size:22px;
+    font-size:34px;
     color:#eaeaea; background-color: transparent; border:0px;border-bottom: 2px solid #eaeaea;
 
 }
@@ -39,7 +40,7 @@ input[type="number"]:focus ,
 input[type="number"]:active
 {
     outline: none;
-    font-size:24px;
+    font-size:34px;
     color:#808000; background-color: transparent;  border:0px;border-bottom: 2px solid #808000;
 }
 
@@ -75,9 +76,10 @@ button:hover{
     background-color: lightgoldenrodyellow;
 }
 
-.row md-slide-toggle{
-    color:#eaeaea; 
-    font-size: 20pt;
+.mxr-slide-toggle-lbl{
+    color:white; 
+    font-size: 16px;
+    font-weight: normal;
 }
 
 md-slide-toggle .md-slide-toggle-container .md-slide-toggle-thumb,
@@ -88,4 +90,3 @@ md-slide-toggle .md-slide-toggle-bar {
 .md-checked   .md-slide-toggle-thumb {
 	background-color: #808000;
 }
-
