@@ -43,6 +43,15 @@ input[type="number"]:active
     color:#808000; background-color: transparent;  border:0px;border-bottom: 2px solid #808000;
 }
 
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 button{
     background: url('/assets/images/search.png') no-repeat center top;
     color: #eaeaea;
@@ -74,5 +83,9 @@ button:hover{
 md-slide-toggle .md-slide-toggle-container .md-slide-toggle-thumb,
 md-slide-toggle .md-slide-toggle-bar {
     background-color:#eaeaea; 
+}
+
+.md-checked   .md-slide-toggle-thumb {
+	background-color: #808000;
 }
 

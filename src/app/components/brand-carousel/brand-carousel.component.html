@@ -1,6 +1,6 @@
 <div class="mxr-carousel">
-  <ul>
-    <li *ngFor="let brand of list">
+  <ul class='mxr-panes'>
+    <li *ngFor="let brand of list; let i = index" > <!--[style.display]="display(i)"-->
       <a href="javascript:return false;">
         <img class="img-responsive" src="{{brand.imgUrl}}" alt="{{brand.name}}" />
       </a>
