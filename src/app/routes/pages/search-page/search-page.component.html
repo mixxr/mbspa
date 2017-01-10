@@ -1,51 +1,53 @@
-
-
-
-
-
 <header>
- 
+
     <nav class="navbar navbar-default" role="navigation" style="top: 0px;">
-    <nav id="mainNav" data-follow="location" data-type="navigation">
-        <ul>
-            <li class="active">
-                <h2>viciou<span style="color:#808000">SS</span>hop</h2>
-            </li>
-            <li>
-                <a href="/wt_48221/about.html">
-                    <div class="open_hover"></div>How it works</a>
-            </li>
-            <li>
-                <a href="/wt_48221/experience.html">
-                    <div class="open_hover"></div>Specials</a>
-            </li>
-            <li>
-                <a href="/wt_48221/resume.html">
-                    <div class="open_hover"></div>Categories</a>
-            </li>
-            <li>
-                <a href="/wt_48221/contacts.html">
-                    <div class="open_hover"></div>Contacts</a>
-            </li>
-        </ul>
+        <nav id="mainNav" data-follow="location" data-type="navigation">
+            <ul [class.responsive]="isResponsive">
+                <li class="icon">
+                    <div (click)="isResponsive=!isResponsive"><span style="padding:5px;font-weight: bold;">SS</span></div>
+                </li>
+                <li class="brand">
+                    <h2>viciou<span style="color:#ffd700">SS</span>hop</h2>
+                </li>
+                <li class="voice">
+                    <a href="javascript:void(0);">
+                        <div class="open_hover"></div>How it works</a>
+                </li>
+                <li class="voice">
+                    <a href="javascript:void(0);">
+                        <div class="open_hover"></div>Specials</a>
+                </li>
+                <li class="voice">
+                    <a href="javascript:void(0);">
+                        <div class="open_hover"></div>Categories</a>
+                </li>
+                <li class="voice">
+                    <a href="javascript:void(0);">
+                        <div class="open_hover"></div>Contacts</a>
+                </li>
+
+            </ul>
+            
+        </nav>
+        <div class="header_plane"></div>
     </nav>
-    <div class="header_plane"></div>
-</nav></header>
+</header>
 <div class="mxr-fullscreen">
     <div class="container ">
 
         <div class="mxr-top-space">
             <div class='row mxr-to-read-bg'>
-                <div class='col-md-6 hidden-sm hidden-xs hidden-xxs'  >
+                <div class='col-md-6 hidden-sm hidden-xs hidden-xxs'>
                     <h1>fix your budget, enjoy the fashion</h1>
-                <h3>You fix your budget and we'll look for you on the web: best offers, special deals, luxury goods, preciuos shoes and a lot of fashion products. 
-                    <br>Play with us: find a product, add to the wishlist or remove and find something similar, ...</h3>
+                    <h3>You fix your budget and we'll look for you on the web: best offers, special deals, luxury goods, preciuos
+                        shoes and a lot of fashion products.
+                        <br>Play with us: find a product, add to the wishlist or remove and find something similar, ...</h3>
                 </div>
-                
+
                 <div class='col-md-6 col-sm-12' style='border-left: 1px solid white'>
                     <app-search-box></app-search-box>
                 </div>
-                
+
             </div>
         </div>
         <div class="row mxr-force-to-bottom mxr-required-min-height">

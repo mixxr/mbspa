@@ -22,7 +22,7 @@ h2{
 }
 .currency{
     
-    color:#808000;
+    color:#ffd700;
 }
 label{
     font-size:34px;
@@ -41,7 +41,7 @@ input[type="number"]:active
 {
     outline: none;
     font-size:34px;
-    color:#808000; background-color: transparent;  border:0px;border-bottom: 2px solid #808000;
+    color:#ffd700; background-color: transparent;  border:0px;border-bottom: 2px solid #ffd700;
 }
 
 input[type='number'] {
@@ -54,7 +54,7 @@ input::-webkit-inner-spin-button {
 }
 
 button{
-    background: url('/assets/images/search.png') no-repeat center top;
+    background: url('/assets/images/search_start.png') no-repeat center top;
     color: #eaeaea;
     border: 0px;
     height: 50px;
@@ -70,10 +70,8 @@ button:active{
 }
 
 button:hover{
-    background: url('/assets/images/search_start.png') no-repeat center top;
-    font-weight: bold;
-    color: #808000;
-    background-color: lightgoldenrodyellow;
+    background: url('/assets/images/search.png') no-repeat center top;
+    color: #ffd700;
 }
 
 .mxr-slide-toggle-lbl{
@@ -88,5 +86,5 @@ md-slide-toggle .md-slide-toggle-bar {
 }
 
 .md-checked   .md-slide-toggle-thumb {
-	background-color: #808000;
+	background-color: #ffd700;
 }

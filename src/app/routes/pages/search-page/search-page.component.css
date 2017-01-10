@@ -41,7 +41,7 @@ background-size: cover;
 }
 
 h1{
-  color:#808000;
+  color:#ffd700;
   font-size: 34px;
 line-height: 1.12;
 }
@@ -92,6 +92,8 @@ footer {
     position: relative;
     display: inline-block;
     padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
     background: url(/assets/images/menu_border.png) right no-repeat;
 }
 
@@ -116,36 +118,67 @@ footer {
     text-align: center;
 }
 
-.navbar-default #mainNav ul li h2{
-    -webkit-margin-before: 0em;
-    -webkit-margin-after: 0em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    font-weight: bold;
-    font: 14px;
-}
 .navbar-default #mainNav ul li a, .navbar-default #mainNav ul li h2 {
     position: relative;
     display: block;
-    font: 12px 'Open Sans',sans-serif;
     padding: 0 20px;
     line-height: 74px;
     color: #afafaf;
-   
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
+.navbar-default #mainNav ul li h2{
+    font-weight: bold;
+    font: 16px 'Open Sans',sans-serif;
+    margin-bottom: 24px;
+}
+
 .navbar-default #mainNav ul li a{
- text-transform: uppercase;
+   text-transform: uppercase;
+    font: 12px 'Open Sans',sans-serif;
 }
 
 .navbar-default #mainNav ul li.active>a, .navbar-default #mainNav ul li a:hover {
     color: #ffffff;
     text-decoration: none;
 }
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+.navbar-default #mainNav ul li.icon {display: none;}
 
+@media screen and (max-width:680px) {
+  .navbar-default #mainNav ul li.voice {
+    display: none;}
+  .navbar-default #mainNav ul li.brand {
+    display: inline-block;
+  }
+  .navbar-default #mainNav ul li.icon {
+    display: inline-block;
+  }
+  .navbar-default #mainNav ul li.icon span {
+    border:1px dotted #9e9e9e;color:#ffd700;
+  }
+  .navbar-default #mainNav ul li.icon span:hover{
+    border:1px solid #f0d700;color:#ffd700;background-color: rgba(216,190,0,0.4)
+  }
+}
 
+@media screen and (max-width:680px) {
+  .navbar-default #mainNav {position: relative;}
+  .navbar-default #mainNav ul.responsive li.icon {
+    position: relative;
+
+  }
+  .navbar-default #mainNav ul.responsive li.voice {
+    
+    display: inline;
+  }
+  
+  .navbar-default #mainNav ul.responsive li.voice a{
+    background-color:rgba(106,106,106,0.6);
+  }
+}
+/* navbar end */
 
 .mxr-top-space{
   margin-top:120px;
